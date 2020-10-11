@@ -16,7 +16,7 @@ class TestUser(unittest.TestCase):
     def test_save_user(self):
         self.new_user.save-user()
 
-    def test_delete_user():
+    def test_delete_user(self):
         self.new_user.save_user()
         test_data = User("Scott","Ethan","ethanbaraka@gmail.com")
         test_data.save_user()
