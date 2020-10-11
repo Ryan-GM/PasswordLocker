@@ -14,5 +14,5 @@ class Creds:
         Creds.creds_list.remove(self)
 
     @classmethod
-    def display_info(cls):
-        return cls.info_list
+    def display_creds(cls):
+        return cls.creds_list
