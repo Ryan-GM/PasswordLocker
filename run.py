@@ -16,14 +16,8 @@ def display_creds():
 def del_creds(creds):
     credential.delete_creds()
 
-def find_creds(search_name):
-        for credential in cls.creds_list:
-            if creds.snapchat == snapchat:
-                return credential
-            elif creds.instagram == instagram:
-                return credential
-            elif creds.twitter == twitter:
-                return credential
+def find_creds(name):
+       return Creds.find_by_name(name)
 
 def create_account(F_name, L_name, P_word):
     new_user = User(F_name, L_name, P_word)
@@ -148,8 +142,8 @@ def main():
         print("WHICH CREDENTIALS WOULD YOU LIKE DELETED??")
         print(" ")
         search_name = input().lower()
-        if find_creds(search_name):
-            search_creds = find_creds(search_name)
+        if find_creds(name):
+            search_creds = find_creds(name)
             print(" ")
             search_creds.delete_creds()
             print('\n')
