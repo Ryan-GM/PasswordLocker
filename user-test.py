@@ -21,3 +21,9 @@ class TestUser(unittest.TestCase):
         test_data = User("Scott","Ethan","ethanbaraka@gmail.com")
         test_data.save_user()
         self.assertEqual(len(User.user_list),2)
+
+    def test_display_user(self):
+        self.assertEqual(User.display_users(),User.user_list)
+
+if __name__ == '__main__':
+    unittest.main()
