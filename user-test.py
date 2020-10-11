@@ -3,12 +3,12 @@ import unittest
 
 class TestUser(unittest.TestCase):
     def setUp(self):
-        self.new_user = User("Ryan","Munge","ryanmunge12@gmail.com")
+        self.new_user = User("Ryan","Munge","slowwhine")
 
     def test_init(self):
         self.assertEqual(self.new_user.F_name,"Ryan")
         self.assertEqual(self.new_user.L_name,"Munge")
-        self.assertEqual(self.new_user.E_mail,"ryanmunge12@gmail.com")
+        self.assertEqual(self.new_user.P_word,"slowwhine")
     
     def tearDown(self):
         User.user_list = []
@@ -20,7 +20,7 @@ class TestUser(unittest.TestCase):
 
     def test_delete_user(self):
         self.new_user.save_user()
-        test_data = User("Scott","Ethan","ethanbaraka@gmail.com")
+        test_data = User("Scott","Ethan","fortniteking")
         test_data.save_user()
         self.assertEqual(len(User.user_list),2)
 
