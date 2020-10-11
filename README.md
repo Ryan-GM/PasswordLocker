@@ -16,7 +16,7 @@ An application that will help you manage your passwords and even generates new p
 
 ## Cloning 
 
-  * using terminal git clone "https://github.com/Ryan-GM/PasswordLocker.git"
+  * using terminal git clone ```https://github.com/Ryan-GM/PasswordLocker.git```
   * cd into PasswordLocker
   * Based on the editor of use code . or atom .
 
