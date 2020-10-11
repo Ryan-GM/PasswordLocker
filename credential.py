@@ -1,7 +1,7 @@
 class Creds:
     creds_list = []
 
-    def __init__(self,snapchat, instagram, twitter, E_mail):
+    def __init__(self, snapchat, instagram, twitter, E_mail):
         self.instagram = instagram
         self.snapchat = snapchat
         self.twitter = twitter
