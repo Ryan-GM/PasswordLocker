@@ -14,9 +14,10 @@ class TestCreds(unittest.TestCase):
     def test_save_info(self):
         self.new_creds.save_creds()
         self.assertEqual(len(Creds.creds_list),1)
+        
 
     def tearDown(self):
-        Creds.Creds_list = []
+        Creds.creds_list = []
 
     def test_delete_creds(self):
         self.new_creds.save_creds()
@@ -26,7 +27,7 @@ class TestCreds(unittest.TestCase):
         self.assertEqual(len(Creds.creds_list),1)
 
     def test_display_creds(self):
-        self.assertEqual(Creds.display_creds(),Creds.creds)
+        self.assertEqual(Creds.display_creds(),Creds.creds_list)
 
 if __name__ == '__main__':
     unittest.main()
