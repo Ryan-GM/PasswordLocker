@@ -17,4 +17,13 @@ class TestCreds(unittest.TestCase):
 
     def tearDown(self):
         Creds.Creds_list = []
-        
+
+    def test_delete_creds(self):
+        self.new_creds.save_creds()
+        test_creds = Creds("ethansolo", "s-ethan", "scottethan", "ethanbaraka@gmail.com")
+        test_creds.save_creds()
+        test_creds.delete_creds()
+        self.assertEqual(len(Creds.creds_list),1)
+
+    
+
