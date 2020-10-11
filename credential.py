@@ -15,3 +15,15 @@ class Creds:
     @classmethod
     def display_creds(cls):
         return cls.creds_list
+
+    @classmethod
+    def find_creds(cls, snapchat, instagram, twitter):
+        for credential in cls.creds_list:
+            if creds.snapchat == snapchat:
+                return credential
+            elif creds.instagram == instagram:
+                return credential
+            elif creds.twitter == twitter:
+                return credential
+
+
