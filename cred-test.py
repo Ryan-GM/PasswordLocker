@@ -13,4 +13,8 @@ class TestCreds(unittest.TestCase):
 
     def test_save_info(self):
         self.new_creds.save_creds()
+        self.assertEqual(len(Creds.creds_list),1)
+
+    def tearDown(self):
+        Creds.Creds_list = []
         
