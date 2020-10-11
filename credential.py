@@ -1,1 +1,2 @@
-ent
+class Creds:
+    creds_list = []
