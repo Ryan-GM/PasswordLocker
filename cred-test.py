@@ -25,5 +25,11 @@ class TestCreds(unittest.TestCase):
         test_creds.delete_creds()
         self.assertEqual(len(Creds.creds_list),1)
 
+    def test_display_creds(self):
+        self.assertEqual(Creds.display_creds(),Creds.creds)
+
+if __name__ == '__main__':
+    unittest.main()
+
     
 
