@@ -10,13 +10,25 @@ class TestCreds(unittest.TestCase):
         self.assertEqual(self.new_creds.twitter,"rm-githanji")
         self.assertEqual(self.new_creds.instagram,"ryan.dfw")
 
-    def test_save_info(self):
+    def test_save_creds(self):
         self.new_creds.save_creds()
         self.assertEqual(len(Creds.creds_list),1)
-        
 
+    def test_save_many_creds(self):
+        self.new_creds.save_creds()
+        test_creds = Creds("tric","gingy","harrycalv")
+        test_creds.save_creds()
+        self.assertEqual(len(Creds.creds_list),2)
+        
     def tearDown(self):
         Creds.creds_list = []
+
+    def test_find_creds(self):
+        self.new_creds.save_creds()
+        test_creds = Creds("njokiM","njokizzle","marrynjoki")
+        test_creds.save_creds()
+        the_creds = Creds.find_creds("njokiM")
+        self.assertEqual(the_creds.snapchat,test_user.snapchat)
 
     def test_delete_creds(self):
         self.new_creds.save_creds()
