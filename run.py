@@ -142,8 +142,8 @@ def main():
         print("WHICH CREDENTIALS WOULD YOU LIKE DELETED??")
         print(" ")
         search_name = input().lower()
-        if find_creds(name):
-            search_creds = find_creds(name)
+        if find_creds():
+            search_creds = find_creds()
             print(" ")
             search_creds.delete_creds()
             print('\n')
